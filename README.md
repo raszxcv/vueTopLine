@@ -1,6 +1,6 @@
 # vueTopLine
 用vue制作的仿今日头条界面
-* 请使用浏览器的模拟手机端功能查看
+* 请使用浏览器的模拟手机端功能查看 在线地址:https://raszxcv.github.io/vueTopLine/dist/
 
 ### 使用方法:
 ```

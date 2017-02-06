@@ -1,6 +1,6 @@
 <template>
 <header>
-      <img id="header-img" src="../assets/logo.png" alt="" @touchstart="shuaxin">
+      <img id="header-img" src="../assets/logo.png" alt="" >
       <input id="search" type="text" name="" placeholder="搜你想搜的"> 
       <nav>
 		<ul :style="{width:width()}">
@@ -8,18 +8,11 @@
 				{{item.text}}
 			</li>
 		</ul>
-<<<<<<< 4c1db4cec0637654170b689d1feb1e0743d037e7
 				
 	  </nav>
-	  <div id="nav-icon" @click="add">+</div>
-=======
-		<div id="nav-icon" @click="add">+</div>		
+	  <div id="nav-icon" @click="add">+</div>	
 	  </nav>
->>>>>>> 第一次
-	  <main @touchstart="down" @touchmove="move" @touchend="Tend" :style="shuxin">
-	  <div class="downUpdate" :style="Update">
-	  	<p>松开刷新</p>
-	  </div>
+	  <main>
 	  	<ul class="newsList">
 	  		<li v-for="(news,index) in newscnt" >
 	  			<div class="cnt-head">
@@ -84,6 +77,9 @@ export default {
     	nices:Storg.fetch("nice-channel"),
     	newscnt:[
     		{head:"我是标题1",cover:"我是封面1",author:"我是作者1",num:"999评论",sec:"3分钟前",color:"green"},
+    		{head:"我是标题2",cover:"我是封面2",author:"我是作者2",num:"999评论",sec:"4分钟前",color:"red"},
+    		{head:"我是标题3",cover:"我是封面3",author:"我是作者3",num:"999评论",sec:"5分钟前",color:"blue"},
+    		{head:"我是标题4",cover:"我是封面4",author:"我是作者4",num:"999评论",sec:"6分钟前",color:"pink"},
     	],
     	isShow:false,
     	shuxin:{
@@ -140,43 +136,6 @@ export default {
   	add:function(){
   		this.isShow=true;
   	},
-  	shuaxin:function(){
-  		console.log("我触摸了屏幕")
-  	},
-  	down:function(e){
-  		console.log(e.touches[0].pageY);
-  		let Th=e.touches[0].pageY/100;
-  		this.TouchH=Th;
-  	},
-  	move:function(e){
-  		this.Mh=e.touches[0].pageY/100;
-  		console.log(this.Mh-this.TouchH)
-  		if(this.Mh-this.TouchH<0){
-  			return
-  		}
-  		this.Update.height=this.Mh-this.TouchH+"rem";
-  		// this.Update.marginBottom=this.Mh-this.TouchH+"rem";
-  		if(this.Mh-this.TouchH>1){
-  			this.Update.height="1rem";
-  			// this.Update.marginBottom="1rem"
-  		}
-  		this.shuxin.marginTop=this.Mh-this.TouchH+"rem"
-  		if(this.Mh-this.TouchH>2){
-  			this.shuxin.marginTop="2rem"
-  		}
-  	},
-  	Tend:function(e){
-
-  		if(this.shuxin.marginTop==="2rem"){ 	
-  			this.Update.height="0rem";	
-  			this.shuxin.marginTop="0rem";
-  			Random.addUnshift(this.newscnt);
-  			console.log("触发了")
-  		}
-  		
-  		
-
-  	}
   }
 };
 </script>
@@ -449,11 +408,7 @@ nav li{
 	text-align: center;
 }
 #nav-icon{
-<<<<<<< 4c1db4cec0637654170b689d1feb1e0743d037e7
 	position:absolute;
-=======
-	position:fixed;
->>>>>>> 第一次
 	top:1.4rem;
 	right:0;
 	height:0.8rem;

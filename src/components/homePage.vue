@@ -19,8 +19,7 @@
 	  				{{ news.head }}
 	  			</div>
 	  			<div class="cnt-cover" >
-	  			<img src="../assets/homecnt.png" alt="">
-	  				
+	  			<img src="../assets/homecnt.png" alt="">	  				
 	  			</div>
 	  			<ul class="message">
 	  				<li class="cover">
@@ -192,6 +191,7 @@ main{
 }
 .cnt-cover,.cnt-cover img{
 	height:2.5rem;
+	width:100%;
 	background:green;
 }
 .newsList ul{

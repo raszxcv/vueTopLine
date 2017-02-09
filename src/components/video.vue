@@ -12,7 +12,9 @@
 		<ul>
 			<li v-for="(list,index) in lists">
 				<div class="list">
-					<div class="listCover" :style="{background:color(index)}">{{ list.cover }}</div>
+					<div class="listCover" >
+						<img src="../assets/video1.png" alt="">
+					</div>
 					<div class="listMessage">
 					<ul>
 						<li class="author"><p><img src="../assets/heh.jpg" alt=""><span>{{ list.author }}</span></p></li>
@@ -50,10 +52,11 @@ export default {
     		{text:"开眼"},
     	],  	
     	lists:[
-    		{cover:"我是封面",author:"我是作者",num:"125万次播放",comment:"999",color:"red"},
+    		{cover:"我是封面",author:"我是作者",num:"125万次播放",comment:"999",color:""},
     		{cover:"我是封面",author:"我是作者",num:"25万次播放",comment:"999",color:"green"},
     		{cover:"我是封面",author:"我是作者",num:"25万次播放",comment:"999",color:"yellow"},
     	],
+
     }
   },
   methods:{
@@ -117,7 +120,7 @@ nav ul li{
 	height:7.3rem;
 
 }
-.listCover{
+.listCover,.listCover img{
 	width:100%;
 	height:6.1rem;
 

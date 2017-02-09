@@ -18,8 +18,9 @@
 	  			<div class="cnt-head">
 	  				{{ news.head }}
 	  			</div>
-	  			<div class="cnt-cover" :style="{ background:color(index) }">
-	  				{{ news.cover }}
+	  			<div class="cnt-cover" >
+	  			<img src="../assets/homecnt.png" alt="">
+	  				
 	  			</div>
 	  			<ul class="message">
 	  				<li class="cover">
@@ -76,10 +77,10 @@ export default {
     	items:Storg.fetch("my-channel"),
     	nices:Storg.fetch("nice-channel"),
     	newscnt:[
-    		{head:"我是标题1",cover:"我是封面1",author:"我是作者1",num:"999评论",sec:"3分钟前",color:"green"},
-    		{head:"我是标题2",cover:"我是封面2",author:"我是作者2",num:"999评论",sec:"4分钟前",color:"red"},
-    		{head:"我是标题3",cover:"我是封面3",author:"我是作者3",num:"999评论",sec:"5分钟前",color:"blue"},
-    		{head:"我是标题4",cover:"我是封面4",author:"我是作者4",num:"999评论",sec:"6分钟前",color:"pink"},
+    		{head:"斗鱼直播传递正能量!",cover:"我是封面1",author:"斗鱼直播",num:"999评论",sec:"3分钟前",color:"green"},
+    		{head:"斗鱼直播传递正能量!",cover:"我是封面2",author:"熊猫TV",num:"999评论",sec:"4分钟前",color:"red"},
+    		{head:"斗鱼直播传递正能量!",cover:"我是封面3",author:"虎牙直播",num:"999评论",sec:"5分钟前",color:"blue"},
+    		{head:"斗鱼直播传递正能量!",cover:"我是封面4",author:"战旗TV",num:"999评论",sec:"6分钟前",color:"pink"},
     	],
     	isShow:false,
     	shuxin:{
@@ -189,7 +190,7 @@ main{
 	height:0.8rem;
 	
 }
-.cnt-cover{
+.cnt-cover,.cnt-cover img{
 	height:2.5rem;
 	background:green;
 }
